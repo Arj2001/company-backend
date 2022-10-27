@@ -25,6 +25,7 @@ public class LeaveModel {
 
     private String type;
     private int emp_id;
+    private String description;
     private String applyDate;
     private String leaveDate;
     private int Status;
