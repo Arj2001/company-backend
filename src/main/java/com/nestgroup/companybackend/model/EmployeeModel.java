@@ -33,6 +33,4 @@ public class EmployeeModel {
     private String password;
     private  String joiningDate;
     private String designation;
-
-
 }

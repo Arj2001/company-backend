@@ -23,7 +23,8 @@ public class LogModel {
     private int id;
 
     private int emp_id;
-    private int sec_id;
-    private String loginTime;
-    private String logoutTime;
+    private int login_sec_id;
+    private int logout_sec_id;
+    private String login_time;
+    private String logout_time;
 }
