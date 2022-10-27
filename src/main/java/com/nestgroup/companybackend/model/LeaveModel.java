@@ -1,5 +1,6 @@
 package com.nestgroup.companybackend.model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,19 +12,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "securities")
+@Table(name = "leaves")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class SecurityModel {
+public class LeaveModel {
 
     @Id
     @GeneratedValue
-    private  int id;
+    private int id;
 
-    private String name;
-    private int age;
-    private String phone;
-
+    private String type;
+    private int emp_id;
+    private String applyDate;
+    private String leaveDate;
+    private int Status;
 }

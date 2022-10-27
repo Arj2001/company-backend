@@ -25,11 +25,11 @@ public class EmployeeModel {
     private int id;
 
     private String name;
-    private String emp_code;
     private int age;
     private int salary;
     private String address;
     private String email;
+    private String phone;
     private String password;
 
 

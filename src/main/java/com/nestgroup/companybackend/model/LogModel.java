@@ -11,19 +11,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "securities")
+@Table(name = "logs")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class SecurityModel {
+public class LogModel {
 
     @Id
     @GeneratedValue
-    private  int id;
+    private int id;
 
-    private String name;
-    private int age;
-    private String phone;
-
+    private int emp_id;
+    private int sec_id;
+    private String loginTime;
+    private String logoutTime;
 }
