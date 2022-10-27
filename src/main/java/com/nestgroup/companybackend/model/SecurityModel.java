@@ -25,5 +25,10 @@ public class SecurityModel {
     private String name;
     private int age;
     private String phone;
+    private String email;
+    private String password;
+    private String address;
+    private int salary;
+    private String doj;
 
 }
