@@ -47,6 +47,8 @@ public class LeaveController {
         return (List<Map<String, String>>) leaveDao.viewAllLeave();
     }
 
+
+    //view all leaves pf empl0yee by employee
     @CrossOrigin("*")
     @PostMapping("/viewLeaveById")
     public List<Map<String,String>> viewLeaveById(@RequestBody LeaveModel model){
