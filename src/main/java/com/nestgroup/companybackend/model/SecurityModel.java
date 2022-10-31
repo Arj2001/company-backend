@@ -31,4 +31,5 @@ public class SecurityModel {
     private int salary;
     private String doj;
 
+
 }

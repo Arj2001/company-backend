@@ -11,6 +11,7 @@ import java.util.Map;
 public interface LogDao extends CrudRepository<LogModel,Integer> {
 
 
+
     @Modifying
     @Query(value = "UPDATE `logs` SET `logout_time`=:logoutTime ,`logout_sec_id`=:logout_sec_id WHERE id = :log_id",nativeQuery = true)
     public void updateLogDetails(String logoutTime,int logout_sec_id,int log_id);
@@ -26,4 +27,7 @@ public interface LogDao extends CrudRepository<LogModel,Integer> {
             "employees e JOIN securities s1 JOIN securities s2 ON l.emp_id = e.id AND " +
             "l.login_sec_id = s1.id AND l.logout_sec_id = s2.id  WHERE l.emp_id = :emp_id",nativeQuery = true)
     public List<Map<String,String>> viewLogByEmpId(Integer emp_id);
+
+    @Query(value ="SELECT * FROM logs where logout_sec_id = 0",nativeQuery = true)
+    public List<LogModel> viewCheckIn();
 }

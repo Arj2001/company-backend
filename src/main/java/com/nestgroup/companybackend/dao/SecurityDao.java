@@ -6,11 +6,16 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+import javax.swing.*;
 import java.util.List;
 
 public interface SecurityDao extends CrudRepository<SecurityModel,Integer> {
 
-    @Query(value = "SELECT * FROM `securities` WHERE name = :name OR id = :id",nativeQuery = true)
+
+    @Query(value = "SELECT * FROM securities WHERE id != 0",nativeQuery = true)
+    public List<SecurityModel> findAll();
+
+    @Query(value = "SELECT * FROM `securities` WHERE name = :name OR id = :id AND id != 0",nativeQuery = true)
     public List<SecurityModel> searchSecurity(String name, int id);
 
     @Query(value = "SELECT * FROM `securities` WHERE email = :email AND password = :password",nativeQuery = true)

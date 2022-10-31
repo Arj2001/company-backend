@@ -12,10 +12,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @RestController
+
 public class SecurityController {
 
     @Autowired
     private SecurityDao securityDao;
+
+
 
     //Security details adding api
     @CrossOrigin(origins = "*")
